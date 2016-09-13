@@ -1,7 +1,6 @@
 require 'aria_sdk/aria_rest_client'
 
 class AriaObjectQueryRestClient < AriaRestClient
-
   attr_reader :prod
 
   def initialize(client_no, auth_key, prod = false)
@@ -15,5 +14,4 @@ class AriaObjectQueryRestClient < AriaRestClient
 
     super client_no, auth_key, url
   end
-
 end

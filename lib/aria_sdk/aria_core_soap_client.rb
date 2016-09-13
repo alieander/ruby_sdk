@@ -21,7 +21,6 @@ class AriaCoreSoapClient
   end
 
   def call(api_name, message = {})
-
     defaults = {
       output_format: 'json',
       client_no: client_no,
@@ -35,5 +34,4 @@ class AriaCoreSoapClient
 
     response.body[response_name.to_sym]
   end
-
 end

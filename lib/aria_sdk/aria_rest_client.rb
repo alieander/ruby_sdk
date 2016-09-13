@@ -13,7 +13,6 @@ class AriaRestClient
   end
 
   def call(api_name, options = {})
-
     defaults = {
       output_format:  'json',
       client_no: client_no,
@@ -25,5 +24,4 @@ class AriaRestClient
 
     self.class.post(url, body: options)
   end
-
 end
