@@ -23,9 +23,7 @@ class AriaRestClient
 
     options.merge!(defaults)
 
-    result = self.class.post(self.url, :body => options)
-
-    return result
+    self.class.post(self.url, :body => options)
   end
 
 end

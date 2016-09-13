@@ -34,9 +34,7 @@ class AriaCoreSoapClient
     #response = @client.call(api_name.to_sym, message: message )
     response_name = api_name << '_response_element'
 
-    body = response.body[response_name.to_sym]
-
-    return body
+    response.body[response_name.to_sym]
   end
 
 end
