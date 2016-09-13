@@ -16,14 +16,14 @@ class AriaRestClient
 
     defaults = {
       :output_format => 'json',
-      :client_no => self.client_no,
-      :auth_key => self.auth_key,
+      :client_no => client_no,
+      :auth_key => auth_key,
       :rest_call => api_name
     }
 
     options.merge!(defaults)
 
-    self.class.post(self.url, :body => options)
+    self.class.post(url, :body => options)
   end
 
 end

@@ -24,8 +24,8 @@ class AriaCoreSoapClient
 
     defaults = {
       output_format: 'json',
-      client_no: self.client_no,
-      auth_key: self.auth_key,
+      client_no: client_no,
+      auth_key: auth_key,
     }
 
     message.merge!(defaults)
