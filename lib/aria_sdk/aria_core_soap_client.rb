@@ -31,7 +31,6 @@ class AriaCoreSoapClient
     message.merge!(defaults)
     response = @client.call(api_name.to_sym, message: message)
 
-    #response = @client.call(api_name.to_sym, message: message )
     response_name = api_name << '_response_element'
 
     response.body[response_name.to_sym]
