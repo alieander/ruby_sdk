@@ -2,30 +2,30 @@ require 'httparty'
 require 'json'
 
 class AriaRestClient
-    include HTTParty
+  include HTTParty
 
-    attr_accessor :client_no, :auth_key, :url
+  attr_accessor :client_no, :auth_key, :url
 
-    def initialize(client_no, auth_key, url)
-        self.client_no = client_no
-        self.auth_key = auth_key
-        self.url = url
-    end
+  def initialize(client_no, auth_key, url)
+    self.client_no = client_no
+    self.auth_key = auth_key
+    self.url = url
+  end
 
-    def call(api_name, options = {})
+  def call(api_name, options = {})
 
-        defaults = {
-            :output_format => 'json',
-            :client_no => self.client_no,
-            :auth_key => self.auth_key,
-            :rest_call => api_name
-        }
+    defaults = {
+      :output_format => 'json',
+      :client_no => self.client_no,
+      :auth_key => self.auth_key,
+      :rest_call => api_name
+    }
 
-        options.merge!(defaults)
+    options.merge!(defaults)
 
-        result = self.class.post(self.url, :body => options)
+    result = self.class.post(self.url, :body => options)
 
-        return result
-    end
+    return result
+  end
 
 end
