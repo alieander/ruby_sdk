@@ -4,7 +4,7 @@ class AriaObjectQueryRestClient < AriaRestClient
 
   attr_reader :prod
 
-  def initialize client_no, auth_key, prod = false
+  def initialize(client_no, auth_key, prod = false)
     @prod = prod
 
     url = if prod
